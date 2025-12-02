@@ -52,7 +52,7 @@ keybind = performable:ctrl+c=copy_to_clipboard
 keybind = performable:ctrl+v=paste_from_clipboard
 keybind = performable:ctrl+n=new_window
 keybind = performable:ctrl+t=new_tab
-keybind = performable:ctrl+w=close_tab
+keybind = performable:ctrl+shift+w=close_tab
 keybind = performable:ctrl+shift+[=previous_tab
 keybind = performable:ctrl+shift+]=next_tab
 # realy alt+backspace
