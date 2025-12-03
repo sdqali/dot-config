@@ -4,7 +4,6 @@ local act = wezterm.action
 
 config.color_scheme = "Dracula (Official)"
 config.use_fancy_tab_bar = true
-config.default_prog = { "/usr/bin/bash" }
 
 config.keys = {
 	{
@@ -15,13 +14,29 @@ config.keys = {
 			mods = "CTRL",
 		}),
 	},
+	{
+		key = "E",
+		mods = "SUPER|SHIFT",
+		action = act.PromptInputLine({
+			description = "Enter new name for tab",
+			action = wezterm.action_callback(function(window, pane, line)
+				if line then
+					window:active_tab():set_title(line)
+				end
+			end),
+		}),
+	},
 }
 for i = 1, 9 do
 	table.insert(config.keys, {
 		key = tostring(i),
 		mods = "CTRL",
-		action = wezterm.action.ActivateTab(i - 1),
+		action = act.ActivateTab(i - 1),
 	})
 end
+
+config.font = wezterm.font("Fira Code")
+config.font_size = 16
+config.freetype_load_target = "Light"
 
 return config
