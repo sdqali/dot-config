@@ -1,0 +1,3 @@
+[caps]>[lctrl]
+[lwin]>[lalt]
+[lalt]>[lwin]
