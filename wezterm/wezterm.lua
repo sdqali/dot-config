@@ -15,6 +15,11 @@ config.keys = {
 		}),
 	},
 	{
+		key = "_",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+	{
 		key = "E",
 		mods = "SUPER|SHIFT",
 		action = act.PromptInputLine({
