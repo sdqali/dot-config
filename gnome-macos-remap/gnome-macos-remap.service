@@ -1,0 +1,11 @@
+[Unit]
+Description=GNOME -> macOS Remap
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=10
+ExecStart=xremap --watch=device %h/.config/gnome-macos-remap/config.yml
+
+[Install]
+WantedBy=default.target
